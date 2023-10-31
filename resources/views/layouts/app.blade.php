@@ -17,6 +17,7 @@
     @stack('before-styles')
     @vite('resources/sass/app.scss')
     @stack('after-styles')
+    @livewireStyles
 </head>
 
 <body>
@@ -57,10 +58,10 @@
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/coreui.bundle.min.js') }}"></script>
     @vite('resources/js/app.js')
-
+    @livewireScripts
     @stack('after-scripts')
     <!-- / Scripts -->
-
+    
 </body>
 
 </html>

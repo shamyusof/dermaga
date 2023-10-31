@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,6 +36,13 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          * Home Routes
          */
         Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+        Route::get('/pages', [App\Http\Controllers\PageController::class, 'index'])->name('pages');
+        //Route::get('/pages', App\Livewire\AllPages::class)->name('pages');
+
+        Route::get('view-pages', [App\App\Livewire\pages\ViewPages::class])->name('view-pages');
+
+
+
         /**
          * Role Routes
          */    
